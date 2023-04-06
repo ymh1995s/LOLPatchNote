@@ -192,25 +192,25 @@ class _OneChampPageState extends State<OneChampPage> {
                     ],
                   ),
                 ),
-                //구분자라인
-                Container(
-                    height: 1.0,
-                    width: MediaQuery.of(context).size.width,
-                    color: Colors.grey),
-                //최근 패치 세부사항
-                Container(
-                  child: Column(                
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
-                        child: Text("최근 패치 세부사항",
-                              style: TextStyle(fontSize: 20)),
-                      ),
-                      MakePatchContentContainer(1), 
-                    ],
-                  ),
-                ),
+                // //구분자라인
+                // Container(
+                //     height: 1.0,
+                //     width: MediaQuery.of(context).size.width,
+                //     color: Colors.grey),
+                // //최근 패치 세부사항
+                // Container(
+                //   child: Column(                
+                //     mainAxisAlignment: MainAxisAlignment.center,
+                //     children: [
+                //       Padding(
+                //         padding: const EdgeInsets.symmetric(vertical: 8.0),
+                //         child: Text("최근 패치 세부사항",
+                //               style: TextStyle(fontSize: 20)),
+                //       ),
+                //       MakePatchContentContainer(1), 
+                //     ],
+                //   ),
+                // ),
                 //구분자라인
                 Container(
                     height: 1.0,

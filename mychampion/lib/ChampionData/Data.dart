@@ -99,7 +99,9 @@ List<bool> IsFavorite =[
   false
 ];
 
-List<String> patchNoteLink =[
+class PatchNoteLink{
+  //얘는 추가하면 뒤에 애들 밀려서 개판되네;;
+  static List<String> link = [
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-6-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-5-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-4-notes/",
@@ -110,39 +112,7 @@ List<String> patchNoteLink =[
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-22-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-21-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-20-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-19-notes/", //10
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-18-notes/", 
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-17-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-16-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-15-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-14-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-13-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-12-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-11-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-10-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-9-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-8-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-7-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-6-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-5-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-4-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-3-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-2-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-1-notes/",
-];
-
-class PatchNoteLink{
-  static List<String> link = ["https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-6-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-5-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-4-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-3-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-1b-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-1-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-23-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-22-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-21-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-20-notes/",
-  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-19-notes/",//10
+  "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-19-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-18-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-17-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-16-notes/",
@@ -162,7 +132,11 @@ class PatchNoteLink{
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-2-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-1-notes/"];
 }
-
+class PatchNoteLinkPlus{
+  //13.7 이후의 버전
+  static List<String> link = [
+    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-7-notes/",];
+}
 
 
 
@@ -707,8 +681,8 @@ class PatchContent_Akshan{
 
 //알리스타
 class PatchContent_Alistar{
-  static List<String> BorNorM=["상향", "상향","상향","하향"];
-  static List<String> patchVer=["13.4","13.3","12.14","12.10"];
+  static List<String> BorNorM=["상향", "상향", "상향","상향","하향"];
+  static List<String> patchVer=["13.7", "13.4","13.3","12.14","12.10"];
   static List<String> patchNoteLink= [PatchNoteLink.link[2], PatchNoteLink.link[3],PatchNoteLink.link[15], PatchNoteLink.link[19]];
 }
 
@@ -729,9 +703,9 @@ class PatchContent_Anivia{
 
 //애니
 class PatchContent_Annie{
-  static List<String> BorNorM=["상향","하향"];
-  static List<String> patchVer=["12.12","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[17], PatchNoteLink.link[19]];
+  static List<String> BorNorM=["하향", "상향","하향"];
+  static List<String> patchVer=["13.7","12.12","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[17], PatchNoteLink.link[19]];
 }
 
 //아펠리오스
@@ -757,9 +731,9 @@ class PatchContent_AurelionSol{
 
 //아지르
 class PatchContent_Azir{
-  static List<String> BorNorM=["조정", "하향","하향","상향"];
-  static List<String> patchVer=["13.5","13.4","12.17","12.6"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[1],PatchNoteLink.link[2],PatchNoteLink.link[12],PatchNoteLink.link[23]];
+  static List<String> BorNorM=["상향","조정", "하향","하향","상향"];
+  static List<String> patchVer=["13.7", "13.5","13.4","12.17","12.6"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[1],PatchNoteLink.link[2],PatchNoteLink.link[12],PatchNoteLink.link[23]];
 }
 
 //바드
@@ -949,9 +923,9 @@ class PatchContent_Gragas{
 
 //그레이브즈
 class PatchContent_Graves{
-  static List<String> BorNorM=["상향"];
-  static List<String> patchVer=["12.17"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[12]];
+  static List<String> BorNorM=["상향", "상향"];
+  static List<String> patchVer=["13.7", "12.17"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[12]];
 }
 
 //그웬
@@ -1049,9 +1023,9 @@ class PatchContent_Kaisa{
 
 //칼리스타
 class PatchContent_Kalista{
-  static List<String> BorNorM=["하향","하향","상향","상향"];
-  static List<String> patchVer=["12.18","12.15","12.7","12.4"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[11],PatchNoteLink.link[14],PatchNoteLink.link[22],PatchNoteLink.link[25]];
+  static List<String> BorNorM=["상향", "하향","하향","상향","상향"];
+  static List<String> patchVer=["13.7", "12.18","12.15","12.7","12.4"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[11],PatchNoteLink.link[14],PatchNoteLink.link[22],PatchNoteLink.link[25]];
 }
 
 //카르마
@@ -1078,9 +1052,9 @@ class PatchContent_Kassadin{
 
 //카타리나
 class PatchContent_Katarina{
-  static List<String> BorNorM=["조정","하향"];
-  static List<String> patchVer=["12.12","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[17],PatchNoteLink.link[19]];
+  static List<String> BorNorM=["상향", "조정","하향"];
+  static List<String> patchVer=["13.7", "12.12","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[17],PatchNoteLink.link[19]];
 }
 
 //케일
@@ -1107,9 +1081,9 @@ class PatchContent_Kennen{
 
 //카직스
 class PatchContent_Khazix{
-  static List<String> BorNorM=["하향"];
-  static List<String> patchVer=["12.10"];
-  static List<String> patchNoteLink= [ PatchNoteLink.link[19]];
+  static List<String> BorNorM=["조정", "하향"];
+  static List<String> patchVer=["13.7", "12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[19]];
 }
 
 //킨드레드
@@ -1149,9 +1123,9 @@ class PatchContent_Leblanc{
 
 //리신
 class PatchContent_LeeSin{
-  static List<String> BorNorM=["상향","상향","상향","하향","하향"];
-  static List<String> patchVer=["12.18","12.15","12.11","12.10","12.7"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[11],PatchNoteLink.link[14],PatchNoteLink.link[18], PatchNoteLink.link[19]
+  static List<String> BorNorM=["하향", "상향","상향","상향","하향","하향"];
+  static List<String> patchVer=["13.7", "12.18","12.15","12.11","12.10","12.7"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[11],PatchNoteLink.link[14],PatchNoteLink.link[18], PatchNoteLink.link[19]
   ,PatchNoteLink.link[22]];
 }
 
@@ -1245,9 +1219,9 @@ class PatchContent_MissFortune{
 
 //오공
 class PatchContent_MonkeyKing{
-  static List<String> BorNorM=["상향","하향","하향","조정","하향","상향"];
-  static List<String> patchVer=["12.20","12.18","12.17","12.14","12.11","12.7"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[9],PatchNoteLink.link[11],PatchNoteLink.link[12],PatchNoteLink.link[15]
+  static List<String> BorNorM=["하향", "상향","하향","하향","조정","하향","상향"];
+  static List<String> patchVer=["13.7", "12.20","12.18","12.17","12.14","12.11","12.7"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[9],PatchNoteLink.link[11],PatchNoteLink.link[12],PatchNoteLink.link[15]
   ,PatchNoteLink.link[18],PatchNoteLink.link[22]];
 }
 
@@ -1326,9 +1300,9 @@ class PatchContent_Nunu{
 
 //울라프
 class PatchContent_Olaf{
-  static List<String> BorNorM=["상향","조정","하향","조정"];
-  static List<String> patchVer=["12.13","12.11","12.10","12.9"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[16],PatchNoteLink.link[18], PatchNoteLink.link[19],PatchNoteLink.link[20]];
+  static List<String> BorNorM=["하향","상향","조정","하향","조정"];
+  static List<String> patchVer=["13.7", "12.13","12.11","12.10","12.9"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[16],PatchNoteLink.link[18], PatchNoteLink.link[19],PatchNoteLink.link[20]];
 }
 
 //오리아나
@@ -1390,9 +1364,9 @@ class PatchContent_Rakan{
 
 //람머스
 class PatchContent_Rammus{
-  static List<String> BorNorM=["하향","조정","상향","상향"];
-  static List<String> patchVer=["13.5","13.1","12.20","12.15"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[1],PatchNoteLink.link[5],PatchNoteLink.link[9],PatchNoteLink.link[14]];
+  static List<String> BorNorM=["하향", "하향","조정","상향","상향"];
+  static List<String> patchVer=["13.7", "13.5","13.1","12.20","12.15"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0],PatchNoteLink.link[1],PatchNoteLink.link[5],PatchNoteLink.link[9],PatchNoteLink.link[14]];
 }
 
 //렉사이
@@ -1462,9 +1436,9 @@ class PatchContent_Samira{
 
 //세주아니
 class PatchContent_Sejuani{
-  static List<String> BorNorM=["상향"];
-  static List<String> patchVer=["12.8"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[21]];
+  static List<String> BorNorM=["하향", "상향"];
+  static List<String> patchVer=["13.7", "12.8"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[21]];
 }
 
 //세나
@@ -1612,9 +1586,9 @@ class PatchContent_Teemo{
 
 //쓰레쉬
 class PatchContent_Thresh{
-  static List<String> BorNorM=["조정","상향","상향","상향","조정","상향"];
-  static List<String> patchVer=["13.4","13.3","12.18","12.15","12.10","12.9"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[2],PatchNoteLink.link[3],PatchNoteLink.link[11],PatchNoteLink.link[14]
+  static List<String> BorNorM=["조정", "조정","상향","상향","상향","조정","상향"];
+  static List<String> patchVer=["13.7", "13.4","13.3","12.18","12.15","12.10","12.9"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[2],PatchNoteLink.link[3],PatchNoteLink.link[11],PatchNoteLink.link[14]
   , PatchNoteLink.link[19],PatchNoteLink.link[20]];
 }
 
@@ -1684,9 +1658,9 @@ class PatchContent_Vayne{
 
 //베이가
 class PatchContent_Veigar{
-  static List<String> BorNorM=["하향", "상향","하향","하향","상향"];
-  static List<String> patchVer=["13.6","13.4","12.11","12.4","12.2"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[0],PatchNoteLink.link[2],PatchNoteLink.link[18],PatchNoteLink.link[25]
+  static List<String> BorNorM=["하향", "하향", "상향","하향","하향","상향"];
+  static List<String> patchVer=["13.7", "13.6","13.4","12.11","12.4","12.2"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[0],PatchNoteLink.link[2],PatchNoteLink.link[18],PatchNoteLink.link[25]
   ,PatchNoteLink.link[27]];
 }
 
@@ -1706,9 +1680,9 @@ class PatchContent_Vex{
 
 //바이
 class PatchContent_Vi{
-  static List<String> BorNorM=["하향"];
-  static List<String> patchVer=["12.10"];
-  static List<String> patchNoteLink= [ PatchNoteLink.link[19]];
+  static List<String> BorNorM=["하향", "하향"];
+  static List<String> patchVer=["13.7", "12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[19]];
 }
 
 //비에고
@@ -1769,9 +1743,9 @@ class PatchContent_XinZhao{
 
 //야스오
 class PatchContent_Yasuo{
-  static List<String> BorNorM=["하향","상향","상향"];
-  static List<String> patchVer=["12.10","12.7","12.2"];
-  static List<String> patchNoteLink= [ PatchNoteLink.link[19],PatchNoteLink.link[22],PatchNoteLink.link[27]];
+  static List<String> BorNorM=["상향", "하향","상향","상향"];
+  static List<String> patchVer=["13.7", "12.10","12.7","12.2"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[19],PatchNoteLink.link[22],PatchNoteLink.link[27]];
 }
 
 //요네
@@ -1812,9 +1786,9 @@ class PatchContent_Zed{
 
 //제리
 class PatchContent_Zeri{
-  static List<String> BorNorM=["하향","상향","하향","하향","하향","조정","하향","하향","하향"];
-  static List<String> patchVer=["13.1","12.23","12.16","12.14","12.12","12.11","12.7","12.4","12.3"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[5],PatchNoteLink.link[6],PatchNoteLink.link[13],PatchNoteLink.link[15]
+  static List<String> BorNorM=["하향", "하향","상향","하향","하향","하향","조정","하향","하향","하향"];
+  static List<String> patchVer=["13.7", "13.1","12.23","12.16","12.14","12.12","12.11","12.7","12.4","12.3"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[5],PatchNoteLink.link[6],PatchNoteLink.link[13],PatchNoteLink.link[15]
   ,PatchNoteLink.link[17],PatchNoteLink.link[18],PatchNoteLink.link[22],PatchNoteLink.link[25],PatchNoteLink.link[26]];
 }
 
