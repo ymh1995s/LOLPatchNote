@@ -48,9 +48,17 @@ class _ChampionsPageState extends State<ChampionsPage> {
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4.0),
-        child: CircleAvatar(
-          radius: circleSize,
-          backgroundImage: ExactAssetImage(ChampionImgLink[index]),
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: circleSize,
+              backgroundImage: ExactAssetImage(ChampionImgLink[index]),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 4),
+              child: Text(ChampionName[index],style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),),
+            )
+          ],
         ),
       ),
     );

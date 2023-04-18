@@ -20,6 +20,11 @@ class _OneChampPageState extends State<OneChampPage> {
   //////////////////////////////////////함수 영역
   Widget MakeBorNorMCircle(
       BuildContext context, String BorNorM, String patchVer, String link) {
+    Color FontColor= Colors.black;
+    if(BorNorM=="상향") FontColor = Colors.blue;
+    else if(BorNorM =="하향") FontColor = Colors.red;
+    else if(BorNorM =="조정") FontColor = Colors.orange;
+
     return GestureDetector(
       onTap: () {
         launch(link, forceWebView: true);
@@ -34,10 +39,7 @@ class _OneChampPageState extends State<OneChampPage> {
                 gradient: const LinearGradient(
                   begin: Alignment.bottomRight,
                   end: Alignment.topLeft,
-                  colors: [
-                    Color(0xff4dabf7),
-                    Color(0xffda77f2),
-                    Color(0xfff783ac),
+                  colors: [Color(0xff4dabf7), Color(0xffda77f2), Color(0xfff783ac),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(500),
@@ -45,7 +47,8 @@ class _OneChampPageState extends State<OneChampPage> {
               child: CircleAvatar(
                 radius: 35,
                 backgroundColor: Colors.white,
-                child: Container(child: Text(BorNorM, style: TextStyle(fontSize: 18))),
+                child: Container(child: 
+                Text(BorNorM, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: FontColor))),
               ),
             ),
             Text(patchVer)
@@ -57,6 +60,38 @@ class _OneChampPageState extends State<OneChampPage> {
   
   
   Widget MakePatchContentContainer(int champNo, int index) {
+    String UpdateDay="";
+    if(patchVerDataArr[champNo][index] == "13.7") UpdateDay=PatchNoteLinkPlusDay.link[0];
+    else if(patchVerDataArr[champNo][index] == "13.6") UpdateDay=PatchNoteLinkDay.link[0];
+    else if(patchVerDataArr[champNo][index] == "13.5") UpdateDay=PatchNoteLinkDay.link[1];
+    else if(patchVerDataArr[champNo][index] == "13.4") UpdateDay=PatchNoteLinkDay.link[2];
+    else if(patchVerDataArr[champNo][index] == "13.3") UpdateDay=PatchNoteLinkDay.link[3];
+    else if(patchVerDataArr[champNo][index] == "13.1B") UpdateDay=PatchNoteLinkDay.link[4];
+    else if(patchVerDataArr[champNo][index] == "13.1") UpdateDay=PatchNoteLinkDay.link[5];
+    else if(patchVerDataArr[champNo][index] == "12.23") UpdateDay=PatchNoteLinkDay.link[6];
+    else if(patchVerDataArr[champNo][index] == "12.22") UpdateDay=PatchNoteLinkDay.link[7];
+    else if(patchVerDataArr[champNo][index] == "12.21") UpdateDay=PatchNoteLinkDay.link[8];
+    else if(patchVerDataArr[champNo][index] == "12.20") UpdateDay=PatchNoteLinkDay.link[9];
+    else if(patchVerDataArr[champNo][index] == "12.19") UpdateDay=PatchNoteLinkDay.link[10];
+    else if(patchVerDataArr[champNo][index] == "12.18") UpdateDay=PatchNoteLinkDay.link[11];
+    else if(patchVerDataArr[champNo][index] == "12.17") UpdateDay=PatchNoteLinkDay.link[12];
+    else if(patchVerDataArr[champNo][index] == "12.16") UpdateDay=PatchNoteLinkDay.link[13];
+    else if(patchVerDataArr[champNo][index] == "12.15") UpdateDay=PatchNoteLinkDay.link[14];
+    else if(patchVerDataArr[champNo][index] == "12.14") UpdateDay=PatchNoteLinkDay.link[15];
+    else if(patchVerDataArr[champNo][index] == "12.13") UpdateDay=PatchNoteLinkDay.link[16];
+    else if(patchVerDataArr[champNo][index] == "12.12") UpdateDay=PatchNoteLinkDay.link[17];
+    else if(patchVerDataArr[champNo][index] == "12.11") UpdateDay=PatchNoteLinkDay.link[18];
+    else if(patchVerDataArr[champNo][index] == "12.10") UpdateDay=PatchNoteLinkDay.link[19];
+    else if(patchVerDataArr[champNo][index] == "12.9") UpdateDay=PatchNoteLinkDay.link[20];
+    else if(patchVerDataArr[champNo][index] == "12.8") UpdateDay=PatchNoteLinkDay.link[21];
+    else if(patchVerDataArr[champNo][index] == "12.7") UpdateDay=PatchNoteLinkDay.link[22];
+    else if(patchVerDataArr[champNo][index] == "12.6") UpdateDay=PatchNoteLinkDay.link[23];
+    else if(patchVerDataArr[champNo][index] == "12.5") UpdateDay=PatchNoteLinkDay.link[24];
+    else if(patchVerDataArr[champNo][index] == "12.4") UpdateDay=PatchNoteLinkDay.link[25];
+    else if(patchVerDataArr[champNo][index] == "12.3") UpdateDay=PatchNoteLinkDay.link[26];
+    else if(patchVerDataArr[champNo][index] == "12.2") UpdateDay=PatchNoteLinkDay.link[27];
+    else if(patchVerDataArr[champNo][index] == "12.1") UpdateDay=PatchNoteLinkDay.link[28];
+
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: Container(
@@ -69,7 +104,12 @@ class _OneChampPageState extends State<OneChampPage> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 4, left: 4),
-              child: Text(patchVerDataArr[champNo][index], style: TextStyle(fontSize: 18)),
+              child: Row(
+                children: [
+                  Text(patchVerDataArr[champNo][index], style: TextStyle(fontSize: 18)),
+                  Text("  " + UpdateDay)
+                ],
+              ),
             ),
             for (int i = 0; i < Detail_TitleArr[champNo][index].length; i++)
               MakePatchContentContainer_Detail(champNo, index, i),
@@ -81,14 +121,14 @@ class _OneChampPageState extends State<OneChampPage> {
 
   Widget MakePatchContentContainer_Detail(int champNo, int index, int index_Detail) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0, left: 8, right: 8),
+      padding: const EdgeInsets.only(bottom: 8, left: 8, right: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(Detail_TitleArr[champNo][index][index_Detail], style: TextStyle(fontSize: 16)),
           for (int i = 0; i < Detail_ContentArr[champNo][index][index_Detail].length; i++) 
             Padding(
-              padding: const EdgeInsets.only(left: 6),
+              padding: const EdgeInsets.only(left: 6, bottom: 4),
               child: Text("ㆍ" + Detail_ContentArr[champNo][index][index_Detail][i], style: TextStyle(fontSize: 14)),
             ),
         ],
@@ -202,7 +242,7 @@ class _OneChampPageState extends State<OneChampPage> {
                           children: [
                             Padding(
                               padding:const EdgeInsets.symmetric(vertical: 8.0),
-                              child: Text("최근 패치 기록", style: TextStyle(fontSize: 20)),
+                              child: Text("최근 패치 기록(링크)", style: TextStyle(fontSize: 20)),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(bottom: 8.0),
@@ -246,7 +286,7 @@ class _OneChampPageState extends State<OneChampPage> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 8.0),
-                            child: Text("역대 패치 기록", style: TextStyle(fontSize: 20),
+                            child: Text("역대 패치 기록(링크)", style: TextStyle(fontSize: 20),
                             ),
                           ),
                           for (int i = 0; i < patchVerDataArr[widget.ChampIndex].length; i++)

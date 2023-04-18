@@ -19,7 +19,7 @@ List<String> ChampionName =
 "세라핀","세주아니","세트","소나","소라카","쉔",
 "쉬바나","스웨인","스카너","시비르","신짜오","신드라",
 "신지드","쓰레쉬","아리","아무무","아우렐리온솔","아이번",
-"아지르","아칼리","아크샨","아트룩스","아펠리오스","알리스타",
+"아지르","아칼리","아크샨","아트록스","아펠리오스","알리스타",
 "애니","애니비아","애쉬","야스오","에코","엘리스",
 "오공","오른","오리아나","울라프","요네","요릭",
 "우디르","우르곳","워윅","유미","이렐리아","이블린",
@@ -133,10 +133,52 @@ class PatchNoteLink{
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-2-notes/",
   "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-12-1-notes/"];
 }
+
+class PatchNoteLinkDay{
+  static List<String> link = [
+    "2023-3-22",
+    "2023-3-8",
+    "2023-2-23",
+    "2023-2-9",
+    "2023-1-27",
+    "2023-1-11",
+    "2022-12-7", //23
+    "2022-11-16",
+    "2022-11-2",
+    "2022-10-19",
+    "2022-10-5",
+    "2022-9-21",
+    "2022-9-8",
+    "2022-8-24",
+    "2022-8-10",
+    "2022-7-27",
+    "2022-7-13",
+    "2022-6-23",
+    "2022-6-8",
+    "2022-5-25", //10
+    "2022-5-11",
+    "2022-4-27",
+    "2022-4-13",
+    "2022-3-30",
+    "2022-3-2",
+    "2022-2-16",
+    "2022-2-2",
+    "2022-1-20",
+    "2022-1-5", //1
+  ];
+}
+
+
 class PatchNoteLinkPlus{
   //13.7 이후의 버전
   static List<String> link = [
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-7-notes/",];
+}
+
+class PatchNoteLinkPlusDay{
+  //13.7 이후의 버전
+  static List<String> link = [
+    "2023-4-5",];
 }
 
 
@@ -981,7 +1023,7 @@ class PatchNoteVer{
   static List<String> Ver = [];
 }
 
-//아트룩스
+//아트록스
 class PatchContent_Aatrox{
   static List<String> BorNorM=["상향", "하향","하향","조정", "하향","상향"];
   static List<String> patchVer=["13.5","13.1","12.20","12.14","12.10","12.4"];
@@ -2357,7 +2399,7 @@ class PatchContent_Leona{
 //릴리아
 class PatchContent_Lillia{
   static List<String> BorNorM=["상향","하향","상향","상향", "하향","하향","상향","상향"];
-  static List<String> patchVer=["13.1B","12.23","12.22","12.15","12.11","12.10","12.7","12,3"];
+  static List<String> patchVer=["13.1B","12.23","12.22","12.15","12.11","12.10","12.7","12.3"];
   static List<String> patchNoteLink= [PatchNoteLink.link[4],PatchNoteLink.link[6],PatchNoteLink.link[7],PatchNoteLink.link[14]
   ,PatchNoteLink.link[18], PatchNoteLink.link[19],PatchNoteLink.link[22],PatchNoteLink.link[26]];
   static List<List<String>> Detail_Title =[["기본 지속 효과 - 꿈나무 지팡이","Q - 뾰로롱 강타","E - 데굴데굴 씨앗"],
