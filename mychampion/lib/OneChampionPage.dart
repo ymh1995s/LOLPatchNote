@@ -61,7 +61,8 @@ class _OneChampPageState extends State<OneChampPage> {
   
   Widget MakePatchContentContainer(int champNo, int index) {
     String UpdateDay="";
-    if(patchVerDataArr[champNo][index] == "13.7") UpdateDay=PatchNoteLinkPlusDay.link[0];
+    if(patchVerDataArr[champNo][index] == "13.8") UpdateDay=PatchNoteLinkPlusDay.link[1];
+    else if(patchVerDataArr[champNo][index] == "13.7") UpdateDay=PatchNoteLinkPlusDay.link[0];
     else if(patchVerDataArr[champNo][index] == "13.6") UpdateDay=PatchNoteLinkDay.link[0];
     else if(patchVerDataArr[champNo][index] == "13.5") UpdateDay=PatchNoteLinkDay.link[1];
     else if(patchVerDataArr[champNo][index] == "13.4") UpdateDay=PatchNoteLinkDay.link[2];
@@ -97,6 +98,8 @@ class _OneChampPageState extends State<OneChampPage> {
       child: Container(
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
+          color: Color.fromARGB(255, 240, 240, 240),
+          borderRadius: BorderRadius.circular(5),
           border: Border.all(),
         ),
         child: Column(
