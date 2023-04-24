@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'ChampionData/Data.dart';
+import 'ChampionData/recentlyPatchChampion.dart';
 import 'OneChampionPage.dart';
 
 late List<int> IsFavoriteNo;
@@ -33,7 +34,7 @@ class _ChampionsPageState extends State<ChampionsPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          for (int i = startIndex; i < endIndex; i++) MakeCircleAvatar(context, i, 25),
+          for (int i = startIndex; i < endIndex; i++) MakeCircleAvatar(context, i, 28),
         ],
       ),
     );
@@ -42,26 +43,96 @@ class _ChampionsPageState extends State<ChampionsPage> {
 
   Widget MakeCircleAvatar(BuildContext context, int index, double circleSize)
   {
-    return GestureDetector(
-      onTap: () {
-        MoveOneChamp(context, index);
-      },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 4.0),
-        child: Column(
-          children: [
-            CircleAvatar(
-              radius: circleSize,
-              backgroundImage: ExactAssetImage(ChampionImgLink[index]),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 4),
-              child: Text(ChampionName[index],style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),),
-            )
-          ],
+    bool tempbool=false;
+    String BorNorM="";
+    Color FontColor= Colors.white;
+    for(int i=0; i<recentlyPatchChampionName.length;i++) 
+      if (ChampionName[index] == recentlyPatchChampionName[i]) 
+      {
+        tempbool = true;
+        BorNorM = recentlyPatchBorNorM[i];
+
+        if (BorNorM == "상") FontColor = Colors.blue;
+        else if (BorNorM == "하") FontColor = Colors.red;
+        else if (BorNorM == "조") FontColor = Colors.white;
+      }
+
+    //가장 최근 패치가 있을 때
+    if (tempbool) {
+      return GestureDetector(
+        onTap: () {
+          MoveOneChamp(context, index);
+        },
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(2),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: circleSize,
+                      backgroundImage: ExactAssetImage(ChampionImgLink[index]),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 2),
+                      child: Text(
+                        ChampionName[index],
+                        style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 22,
+                width: 22,
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(),
+                ),
+                child: Center(
+                  child: Text(BorNorM,
+                      style: TextStyle(color: FontColor, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.center),
+                ),
+              )
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    } 
+    //가장 최근 패치가 없을 때 
+    else {
+      return GestureDetector(
+        onTap: () {
+          MoveOneChamp(context, index);
+        },
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          child: Padding(
+            padding: const EdgeInsets.all(2),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: circleSize,
+                  backgroundImage: ExactAssetImage(ChampionImgLink[index]),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text(
+                    ChampionName[index],
+                    style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      );
+    }
   }
 
   Widget MakeCircleAvatar_Favorite(BuildContext context, int index, double circleSize, bool isfavorite)
@@ -95,6 +166,10 @@ class _ChampionsPageState extends State<ChampionsPage> {
             body: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 3, top:2),
+                  child: Text(recentlyPatchName, style: TextStyle(fontSize: 12),),
+                ),
                 // 즐찾 챔피언
                 Container(
                   width: MediaQuery.of(context).size.width,
@@ -102,17 +177,14 @@ class _ChampionsPageState extends State<ChampionsPage> {
                   child: Column(                
                     mainAxisAlignment: MainAxisAlignment.center,                
                     children: [
+                      Text("즐겨찾기", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text("즐겨찾기", style: TextStyle(fontSize: 20)),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 8.0),
+                        padding: const EdgeInsets.only(bottom: 4, top :4),
                         child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                              for (int i = 0; i < ChampionNameEn.length; i++) MakeCircleAvatar_Favorite(context,i,30,IsFavorite[i]),
+                              for (int i = 0; i < ChampionNameEn.length; i++) MakeCircleAvatar_Favorite(context,i,32,IsFavorite[i]),
                               ],
                             ),
                         ),
@@ -133,8 +205,8 @@ class _ChampionsPageState extends State<ChampionsPage> {
                       child: Column(
                         children: [
                         //6*27 + 1 = 163개 챔피언, 밀리오 추가
-                        for (int i = 0; i < 162; i += 6) MakeOneLineCircleAvatar(context, i, i + 6),
-                        MakeOneLineCircleAvatar(context, 162, 163), //마지막줄이다 맨이야(헤카림)
+                        for (int i = 0; i < 160; i += 5) MakeOneLineCircleAvatar(context, i, i + 5),
+                        MakeOneLineCircleAvatar(context, 160, 163), //마지막줄이다 맨이야(헤카림)
                       ],
                       ),
                     ),
