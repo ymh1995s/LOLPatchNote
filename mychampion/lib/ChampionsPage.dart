@@ -46,6 +46,19 @@ class _ChampionsPageState extends State<ChampionsPage> {
     bool tempbool=false;
     String BorNorM="";
     Color FontColor= Colors.white;
+
+    //정렬 맞추기 위해 빈 부분은 깡통으로 채움
+    if(index>=163)
+    {
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4.0),
+        child: Padding(
+          padding: const EdgeInsets.all(2),
+          child: Container(width:circleSize*2, height: circleSize*2),
+        ),
+      );
+    }
+
     for(int i=0; i<recentlyPatchChampionName.length;i++) 
       if (ChampionName[index] == recentlyPatchChampionName[i]) 
       {
@@ -56,6 +69,7 @@ class _ChampionsPageState extends State<ChampionsPage> {
         else if (BorNorM == "하") FontColor = Colors.red;
         else if (BorNorM == "조") FontColor = Colors.white;
       }
+
 
     //가장 최근 패치가 있을 때
     if (tempbool) {
@@ -206,7 +220,7 @@ class _ChampionsPageState extends State<ChampionsPage> {
                         children: [
                         //6*27 + 1 = 163개 챔피언, 밀리오 추가
                         for (int i = 0; i < 160; i += 5) MakeOneLineCircleAvatar(context, i, i + 5),
-                        MakeOneLineCircleAvatar(context, 160, 163), //마지막줄이다 맨이야(헤카림)
+                        MakeOneLineCircleAvatar(context, 160, 165), //마지막줄이다 맨이야(헤카림)
                       ],
                       ),
                     ),
