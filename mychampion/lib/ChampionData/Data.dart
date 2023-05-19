@@ -174,7 +174,8 @@ class PatchNoteLinkPlus{
   static List<String> link = [
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-7-notes/",
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-8-notes/",
-    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-9-notes/",];
+    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-9-notes/",
+    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-10-notes/",];
 }
 
 class PatchNoteLinkPlusDay{
@@ -182,7 +183,8 @@ class PatchNoteLinkPlusDay{
   static List<String> link = [
     "2023-4-5",
     "2023-4-19",
-    "2023-5-3",];
+    "2023-5-3",
+    "2023-5-18",];
 }
 
 
@@ -1116,13 +1118,18 @@ class PatchContent_Akali{
 
 //아크샨
 class PatchContent_Akshan{
-  static List<String> BorNorM=["상향","하향","하향"];
-  static List<String> patchVer=["12.20","12.10","12.3"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[9], PatchNoteLink.link[19],PatchNoteLink.link[26]];
-  static List<List<String>> Detail_Title =[["E - 영웅의 비상"],
+  static List<String> BorNorM=["상향","상향","하향","하향"];
+  static List<String> patchVer=["13.10","12.20","12.10","12.3"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[3],PatchNoteLink.link[9], PatchNoteLink.link[19],PatchNoteLink.link[26]];
+  static List<List<String>> Detail_Title =[
+    ["기본 지속 효과 - 비열한 싸움","Q - 복수의 부메랑"],
+    ["E - 영웅의 비상"],
   ["기본 지속 효과 - 비열한 싸움"],
   ["기본 지속 효과 - 비열한 싸움"]];
-  static List<List<List<String>>> Detail_Content =[[["비상 지속시간: 3초 ⇒ 무제한"]],
+  static List<List<List<String>>> Detail_Content =[[["3회 중첩 시 마법 피해량: 10~165 (레벨에 따라) ⇒ 10~165 (레벨에 따라) (+주문력의 60%)", "보호막 흡수량: 40~280 (+추가 공격력의 35%), 챔피언 레벨에 따라 선형적으로 증가 ⇒ 40~280 (+추가 공격력의 35%), 기본 능력치 증가에 따라 비선형적으로 증가. (참고: 실질적으로는 게임 초반과 중반에 보호막 흡수량이 약 10% 감소하게 됩니다.)"],
+  ["적 챔피언 적중 시 추가 이동 속도: 40% ⇒ 40% (+주문력 100당 5%)"]],
+    
+    [["비상 지속시간: 3초 ⇒ 무제한"]],
 
   [["보호막 흡수량 40~300 (레벨에 따라) (+추가 공격력의 40%) ⇒ 40~280 (레벨에 따라) (+추가 공격력의 35%)"]],
   
@@ -2149,16 +2156,21 @@ class PatchContent_Kaisa{
 
 //칼리스타
 class PatchContent_Kalista{
-  static List<String> BorNorM=["상향", "하향","하향","상향","상향"];
-  static List<String> patchVer=["13.7", "12.18","12.15","12.7","12.4"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[11],PatchNoteLink.link[14],
+  static List<String> BorNorM=["상향","상향", "하향","하향","상향","상향"];
+  static List<String> patchVer=["13.10","13.7", "12.18","12.15","12.7","12.4"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[3],PatchNoteLinkPlus.link[0], PatchNoteLink.link[11],PatchNoteLink.link[14],
   PatchNoteLink.link[22],PatchNoteLink.link[25]];
-  static List<List<String>> Detail_Title =[["기본 능력치", "기본 지속 효과 - 영혼 결속"],
+  static List<List<String>> Detail_Title =[
+    ["E - 뽑아 찢기"],
+    ["기본 능력치", "기본 지속 효과 - 영혼 결속"],
   ["기본 능력치"],
   ["기본 능력치"],
   ["기본 능력치"],
   ["기본 능력치"]];
-  static List<List<List<String>>> Detail_Content =[[["공격력 증가량: 3.5 ⇒ 3.75"],
+  static List<List<List<String>>> Detail_Content =[[["둔화율: 10/18/26/34/42% ⇒ 10/18/26/34/42% (+주문력 100당 5%)", "물리 피해량: 20/30/40/50/60 (+공격력의 70%) ⇒ 20/30/40/50/60 (+공격력의 70%) (+주문력의 20%)", "중첩 추가 피해량: 10/16/22/28/34 (+공격력의 23.2/27.55/31.9/36.25/40.6%) ⇒ 10/16/22/28/34 (+공격력의 23.2/27.55/31.9/36.25/40.6%) (+주문력의 20%)"]],
+
+    [["공격력 증가량: 3.5 ⇒ 3.75"],
+    
   ["(신규) 계약 의식 지속시간: 12초 ⇒ 8초 (참고: 계약은 칼리스타가 칠흑의 창을 사용하면 발동됩니다.)", "전투도 함께, 정신 집중도 함께: 이제 계약자가 다시 살아나는 행동을 취할 때 칼리스타가 칠흑의 창에 강제로 정신을 집중합니다."]],
 
   [["기본 체력 604 ⇒ 574"]],
@@ -2336,13 +2348,17 @@ class PatchContent_Khazix{
 
 //킨드레드
 class PatchContent_Kindred{
-  static List<String> BorNorM=["하향","상향","하향"];
-  static List<String> patchVer=["13.1B","12.22","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[4], PatchNoteLink.link[7],PatchNoteLink.link[19]];
-  static List<List<String>> Detail_Title =[["Q - 화살 세례"],
+  static List<String> BorNorM=["상향","하향","상향","하향"];
+  static List<String> patchVer=["13.10","13.1B","12.22","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[3],PatchNoteLink.link[4], PatchNoteLink.link[7],PatchNoteLink.link[19]];
+  static List<List<String>> Detail_Title =[["W - 늑대의 광기","E - 차오르는 공포"],
+    ["Q - 화살 세례"],
   ["Q - 화살 세례"],
   ["W - 늑대의 광기", "R - 양의 안식처"]];
-  static List<List<List<String>>> Detail_Content =[[["물리 피해량: 60/85/110/135/160 (+추가 공격력의 75%) ⇒ 50/75/100/125/150 (+추가 공격력의 75%)"]],
+  static List<List<List<String>>> Detail_Content =[[["마법 피해량: 25/30/35/40/45 (+추가 공격력의 20%) (+대상 현재 체력의 1.5% (+표식당 1%)) ⇒ 25/30/35/40/45 (+추가 공격력의 20%) (+주문력의 20%) (+대상 현재 체력의 1.5% (+표식당 1%))"],
+  ["둔화율: 50% ⇒ 50% (+주문력 100당 5%)"]],
+
+    [["물리 피해량: 60/85/110/135/160 (+추가 공격력의 75%) ⇒ 50/75/100/125/150 (+추가 공격력의 75%)"]],
   
   [["사용 후 추가 공격 속도: 25% ⇒ 35%"]],
   
@@ -2843,14 +2859,17 @@ class PatchContent_Nautilus{
 
 //니코
 class PatchContent_Neeko{
-  static List<String> BorNorM=["조정","상향","상향"];
-  static List<String> patchVer=["13.9","12.7","12.4"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[2],PatchNoteLink.link[22],PatchNoteLink.link[25]];
-  static List<List<String>> Detail_Title =[
+  static List<String> BorNorM=["상향","조정","상향","상향"];
+  static List<String> patchVer=["13.10","13.9","12.7","12.4"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[3],PatchNoteLinkPlus.link[2],PatchNoteLink.link[22],PatchNoteLink.link[25]];
+  static List<List<String>> Detail_Title =[["Q - 꽃망울 폭발", "W - 형상 분리", "R - 만개"],
     ["기본 지속 효과 - 태고의 마력", "Q - 꽃망울 폭발", "W - 형상 분리", "E - 칭칭올가미", "R - 만개"],
     ["W - 형상 분리"],
   ["기본 능력치", "Q - 꽃망울 폭발", "W - 형상 분리"]];
-  static List<List<List<String>>> Detail_Content =[
+  static List<List<List<String>>> Detail_Content =[[["몬스터 대상 추가 피해량: 30/40/50/60/70 ⇒ 35/50/65/80/95"],
+  ["몬스터 대상 추가 피해량: 50 ⇒ 75"],
+  ["마법 피해량: 150/350/550 (+주문력의 100%) ⇒ 150/350/550 (+주문력의 120%)"]],
+  
     [["니코가 쇼마를 받아!: 에픽 몬스터를 제외한 몬스터, 미니언, 덫, 와드 또는 식물 근처에 2초 동안 있으면 해당 유닛의 쇼마를 저장합니다. 바에 있는 아이콘을 누르면 해당 유닛으로 변신할 수 있습니다. 니코 얼굴 아이콘을 누르면 니코로 돌아갑니다. 작은 'X' 표시를 눌러 현재 저장된 쇼마를 지울 수 있으며 한 번에 하나의 유닛만 저장할 수 있습니다.", "니코의 변신은 단단해!: 이제 피해를 입어도 변신이 풀리지 않으며 변신한 니코가 죽거나 군중 제어기의 효과를 받았을 때만 변신이 풀립니다.", "(삭제)제한 속도 초과: 이제 니코가 자신보다 능력치가 더 높은 변신 대상의 기본 공격 속도/이동 속도를 이어받지 않습니다.", "재사용 대기시간: 25~10초 (레벨에 따라) ⇒ 2초"],
     ["2차/3차 폭발 피해: 40/65/90/115/140 (+주문력의 20%) ⇒ 35/60/85/110/135 (+주문력의 25%)", "피해 반경: 225 ⇒ 250 (참고: 이제 언제나 최대 사거리 E - 칭칭올가미 속박에 Q - 꽃망울 폭발을 맞출 수 있습니다.)", "(신규)정글의 꽃: 이제 Q - 꽃망울 폭발이 몬스터를 대상으로 30/40/50/60/70 추가 피해를 입힙니다.", "(신규)안정적인 폭발: 이제 최대 사거리 너머로 Q - 꽃망울 폭발을 사용하면 니코가 스킬을 사용하기 위해 움직이는 대신 스킬을 최대 사거리로 사용합니다."],
     ["(신규)니코가 니코를 움직여: 사용 후 스킬을 재사용해 분신을 다른 위치로 보낼 수 있습니다.", "(신규)니코는 재밌어!: 이제 분신이 Q - 꽃망울 폭발/E - 칭칭올가미/춤/농담/도발/귀환/웃음의 애니메이션 및 음향을 지속 시간이 끝날 때까지 따라 합니다.", "니코 정글!: 강화된 공격이 몬스터에게 50의 추가 피해를 입힙니다.", "니코는 하나야: 니코의 분신이 니코 100 범위 앞에 생성됩니다. ⇒ 니코의 분신이 동일한 위치에 생성됩니다."],
@@ -3964,12 +3983,15 @@ class PatchContent_Varus{
 
 //베인
 class PatchContent_Vayne{
-  static List<String> BorNorM=["하향","하향"];
-  static List<String> patchVer=["13.6","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[0], PatchNoteLink.link[19]];
-  static List<List<String>> Detail_Title =[["기본 지속 효과 - 어둠 사냥꾼","Q - 구르기","W - 은화살"],
+  static List<String> BorNorM=["상향","하향","하향"];
+  static List<String> patchVer=["13.10","13.6","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[3],PatchNoteLink.link[0], PatchNoteLink.link[19]];
+  static List<List<String>> Detail_Title =[["Q - 구르기"],
+    ["기본 지속 효과 - 어둠 사냥꾼","Q - 구르기","W - 은화살"],
   ["기본 능력치", "W - 은화살"]];
-  static List<List<List<String>>> Detail_Content =[[["추가 이동 속도: 30 ⇒ 45"],
+  static List<List<List<String>>> Detail_Content =[[["다음 공격 시 추가 물리 피해량: 공격력의 75/85/95/105/115% ⇒ 공격력의 75/85/95/105/115% +주문력의 50%"]],
+    
+    [["추가 이동 속도: 30 ⇒ 45"],
   ["추가 물리 피해량: 공격력의 60/65/70/75/80% ⇒ 공격력의 75/85/95/105/115%","강화된 기본 공격 지속시간: 7초 ⇒ 3초" ],
   ["최대 체력 비례 피해량: 대상 최대 체력의 4/6/8/10/12% ⇒ 대상 최대 체력의 6/7/8/9/10%"]],
   
