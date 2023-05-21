@@ -2351,12 +2351,13 @@ class PatchContent_Kindred{
   static List<String> BorNorM=["상향","하향","상향","하향"];
   static List<String> patchVer=["13.10","13.1B","12.22","12.10"];
   static List<String> patchNoteLink= [PatchNoteLinkPlus.link[3],PatchNoteLink.link[4], PatchNoteLink.link[7],PatchNoteLink.link[19]];
-  static List<List<String>> Detail_Title =[["W - 늑대의 광기","E - 차오르는 공포"],
+  static List<List<String>> Detail_Title =[["기본 능력치", "W - 늑대의 광기","E - 차오르는 공포"],
     ["Q - 화살 세례"],
   ["Q - 화살 세례"],
   ["W - 늑대의 광기", "R - 양의 안식처"]];
-  static List<List<List<String>>> Detail_Content =[[["마법 피해량: 25/30/35/40/45 (+추가 공격력의 20%) (+대상 현재 체력의 1.5% (+표식당 1%)) ⇒ 25/30/35/40/45 (+추가 공격력의 20%) (+주문력의 20%) (+대상 현재 체력의 1.5% (+표식당 1%))"],
-  ["둔화율: 50% ⇒ 50% (+주문력 100당 5%)"]],
+  static List<List<List<String>>> Detail_Content =[[["체력 증가량: 99 ⇒ 104","공격력 증가량: 2.5 ⇒ 3.25"],
+    ["마법 피해량: 25/30/35/40/45 (+추가 공격력의 20%) (+대상 현재 체력의 1.5% (+표식당 1%)) ⇒ 25/30/35/40/45 (+추가 공격력의 20%) (+주문력의 20%) (+대상 현재 체력의 1.5% (+표식당 1%))"],
+  ["둔화율: 50% ⇒ 50% (+주문력 100당 5%)", "치명타 기준값: 대상 최대 체력의 15~65%, 치명타 확률에 비례 ⇒ 대상 최대 체력의 25~75%, 치명타 확률에 비례"]],
 
     [["물리 피해량: 60/85/110/135/160 (+추가 공격력의 75%) ⇒ 50/75/100/125/150 (+추가 공격력의 75%)"]],
   
@@ -4195,15 +4196,21 @@ class PatchContent_XinZhao{
 
 //야스오
 class PatchContent_Yasuo{
-  static List<String> BorNorM=["상향", "하향","상향","상향"];
-  static List<String> patchVer=["13.7", "12.10","12.7","12.2"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[19],PatchNoteLink.link[22],
+  static List<String> BorNorM=["상향", "상향", "하향","상향","상향"];
+  static List<String> patchVer=["13.10", "13.7", "12.10","12.7","12.2"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[3], PatchNoteLinkPlus.link[0], PatchNoteLink.link[19],PatchNoteLink.link[22],
   PatchNoteLink.link[27]];
-  static List<List<String>> Detail_Title =[["기본 지속 효과 - 낭인의 길","E - 질풍검"],
+  static List<List<String>> Detail_Title =[["기본 능력치","기본 지속 효과 - 낭인의 길", "W - 바람 장막"],
+    ["기본 지속 효과 - 낭인의 길","E - 질풍검"],
   ["기본 지속 효과 - 낭인의 길"],
   ["기본 능력치","R - 최후의 숨결"],
   ["Q - 강철 폭풍"]];
-  static List<List<List<String>>> Detail_Content =[[["보호막 흡수량: 100/105/110/115/120/130/140/150/160/170/180/200/220/250/290/350/410/475 ⇒ 100/105/110/115/125/135/145/160/175/195/220/250/275/325/375/425/500/575"],
+  static List<List<List<String>>> Detail_Content =[
+    [["체력 증가량: 101 ⇒ 110"],
+    ["기본 지속 효과 - 낭인의 길 보호막 흡수량: 100~575 ⇒ 125~600"],
+    ["W - 바람 장막 재사용 대기시간: 30/27/24/21/18초 ⇒ 25/23/21/19/17초"]],    
+    
+    [["보호막 흡수량: 100/105/110/115/120/130/140/150/160/170/180/200/220/250/290/350/410/475 ⇒ 100/105/110/115/125/135/145/160/175/195/220/250/275/325/375/425/500/575"],
   ["중첩당 피해량 증가: E - 질풍검 기본 피해량의 25% ⇒ E - 질풍검 총 피해량의 15~25% (레벨에 따라 선형적으로 증가)","최대 중첩 수치: 2 ⇒ 4" ]],
   
   [["보호막 흡수량 115~525 ⇒ 100~475 (레벨에 따라)"]],
@@ -4216,13 +4223,18 @@ class PatchContent_Yasuo{
 
 //요네
 class PatchContent_Yone{
-  static List<String> BorNorM=["하향","상향","상향"];
-  static List<String> patchVer=["12.10","12.7","12.2"];
-  static List<String> patchNoteLink= [ PatchNoteLink.link[19],PatchNoteLink.link[22],PatchNoteLink.link[27]];
-  static List<List<String>> Detail_Title =[["W - 영혼 가르기"],
+  static List<String> BorNorM=["상향","하향","상향","상향"];
+  static List<String> patchVer=["13.10", "12.10","12.7","12.2"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[3],  PatchNoteLink.link[19],PatchNoteLink.link[22],PatchNoteLink.link[27]];
+  static List<List<String>> Detail_Title =[["기본 능력치", "W - 영혼 가르기"],
+    ["W - 영혼 가르기"],
   ["R - 운명봉인"],
   ["Q - 필멸의 검"]];
-  static List<List<List<String>>> Detail_Content =[[["보호막 흡수량 40~60 (레벨에 따라) (+추가 공격력의 60%) ⇒ 35~55 (레벨에 따라) (+추가 공격력의 55%)"]],
+  static List<List<List<String>>> Detail_Content =[
+    [["기본 방어력: 28 ⇒ 30", "체력 증가량: 99 ⇒ 105"],
+    ["재사용 대기시간: 16~6초, 추가 공격 속도에 비례 ⇒ 14~6초, 추가 공격 속도에 비례", "보호막 흡수량: 35~55 (레벨에 따라) (+추가 공격력의 55%) ⇒ 45~65 (레벨에 따라) (+추가 공격력의 65%)"]],
+    
+    [["보호막 흡수량 40~60 (레벨에 따라) (+추가 공격력의 60%) ⇒ 35~55 (레벨에 따라) (+추가 공격력의 55%)"]],
   
   [["재사용 대기시간 120/100/80초 ⇒ 120/90/60초"]],
   
