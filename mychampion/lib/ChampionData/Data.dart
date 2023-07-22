@@ -100,10 +100,6 @@ List<bool> IsFavorite =[
   false,false
 ];
 
-List<bool> IsFavorite_New =[
-  false
-];
-
 class PatchNoteLink{
   //얘는 추가하면 뒤에 애들 밀려서 개판되네;;
   static List<String> link = [
@@ -3036,8 +3032,8 @@ class PatchContent_Naffiri{
   static List<String> BorNorM=[];
   static List<String> patchVer=[];
   static List<String> patchNoteLink= [];
-  static List<List<String>> Detail_Title =[];
-  static List<List<List<String>>> Detail_Content =[];
+  static List<List<String>> Detail_Title =[[]];
+  static List<List<List<String>>> Detail_Content =[[[]]];
 }
 
 //노틸러스
@@ -3414,7 +3410,8 @@ class PatchContent_RekSai{
   ["E - 성난 이빨", "E - 땅굴 파기"]];
 
   static List<List<List<String>>> Detail_Content =[
-    [["물리 피해량: 55/70/85/100/115 (+추가 공격력의 80%) ⇒ 50/65/80/95/110 (+추가 공격력의 80%)", "물리 피해량: 55/60/65/70/75 (+추가 공격력의 85%) ⇒ 5/10/15/20/25 (+총 공격력의 70%)"]],
+    [["물리 피해량: 55/70/85/100/115 (+추가 공격력의 80%) ⇒ 50/65/80/95/110 (+추가 공격력의 80%)"], 
+    ["물리 피해량: 55/60/65/70/75 (+추가 공격력의 85%) ⇒ 5/10/15/20/25 (+총 공격력의 70%)"]],
 
     [["기본 공격력: 61 ⇒ 58", "기본 체력: 640 ⇒ 600"]],
 
@@ -4822,7 +4819,8 @@ class IsFavorite_SharedPreferencess extends ChangeNotifier {
 
   // 생성자(Constructor)
   IsFavorite_SharedPreferencess(this.prefs) {
-    for(int i = 0; i<ChampionNameEn.length;i++) IsFavoriteInClass[i] = prefs.getBool(ChampionNameEn[i]) ?? false;
+    for(int i = 0; i<ChampionNameEn.length;i++) 
+      IsFavoriteInClass[i] = prefs.getBool(ChampionNameEn[i]) ?? false;
   }
 
   //즐찾 여부 shared prefecrences 단에서 (꺼져도 저장 되어 있는 데이터)
@@ -4856,6 +4854,6 @@ class IsFavorite_SharedPreferencess extends ChangeNotifier {
     false,false,false,false,false,false,
     false,false,false,false,false,false,
     false,false,false,false,false,false,  
-    false
+    false,false
   ];
 }
