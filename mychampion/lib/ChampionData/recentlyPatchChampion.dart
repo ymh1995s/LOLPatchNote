@@ -1,5 +1,5 @@
 //8월 30일에 추가 패치노트 반영
-
+//커밋 테스트
 //13.17
 List<String> recentlyPatchChampionName =
 ["케인", "카직스", "킨드레드", "나피리", "제라스",
