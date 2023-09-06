@@ -1983,8 +1983,8 @@ class PatchContent_Graves{
 //그웬
 class PatchContent_Gwen{
   static List<String> BorNorM=["상향", "상향","하향","조정","하향","하향","상향","하향"];
-  static List<String> patchVer=[PatchNoteLinkPlus.link[8], "12.20","12.15","12.13","12.11","12.10","12.7","12.5"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[9],PatchNoteLink.link[14],PatchNoteLink.link[16],PatchNoteLink.link[18]
+  static List<String> patchVer=["13.15", "12.20","12.15","12.13","12.11","12.10","12.7","12.5"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[8], PatchNoteLink.link[9],PatchNoteLink.link[14],PatchNoteLink.link[16],PatchNoteLink.link[18]
   , PatchNoteLink.link[19],PatchNoteLink.link[22],PatchNoteLink.link[24]];
   static List<List<String>> Detail_Title =[
   ["기본 능력치","W - 신성한 안개"],
@@ -2066,7 +2066,7 @@ class PatchContent_Hecarim{
 class PatchContent_Heimerdinger{
   static List<String> BorNorM=["조정", "하향","상향"];
   static List<String> patchVer=["13.15", "13.1B","12.12"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[4],PatchNoteLink.link[17]];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[8],PatchNoteLink.link[4],PatchNoteLink.link[17]];
   static List<List<String>> Detail_Title =[
     ["R - H-28Q 최첨단 포탑"],
     ["Q - H-28G 진화형 포탑","W - 마법공학 초소형 로켓"],
@@ -2950,7 +2950,7 @@ class PatchContent_Malzahar{
 class PatchContent_Maokai{
   static List<String> BorNorM=["하향", "하향","하향","상향","상향","하향", "조정","조정","하향"];
   static List<String> patchVer=["13.15", "13.4","13.1B","12.23","12.22","12.20","12.18","12.17","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[2],PatchNoteLink.link[4],PatchNoteLink.link[6],PatchNoteLink.link[7],
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[7], PatchNoteLink.link[2],PatchNoteLink.link[4],PatchNoteLink.link[6],PatchNoteLink.link[7],
   PatchNoteLink.link[9], PatchNoteLink.link[11],PatchNoteLink.link[12], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
   ["Q - 덤불 주먹"],
@@ -3615,7 +3615,7 @@ class PatchContent_RekSai{
 class PatchContent_Rell{
   static List<String> BorNorM=["조정", "하향", "조정", "하향", "조정", "상향","하향"];
   static List<String> patchVer=["13.15", "13.14", "13.13", "13.12", "13.11","12.17","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[7], PatchNoteLinkPlus.link[6], PatchNoteLinkPlus.link[5], PatchNoteLinkPlus.link[4], 
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[8], PatchNoteLinkPlus.link[7], PatchNoteLinkPlus.link[6], PatchNoteLinkPlus.link[5], PatchNoteLinkPlus.link[4], 
   PatchNoteLink.link[12], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
   ["기본 지속 효과 - 갑옷 파쇄", "Q - 파열의 일격", "W - 철마술: 탑승"],
