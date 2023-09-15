@@ -24,7 +24,7 @@ class _ChampionsPageState extends State<ChampionsPage> {
 
   void InitChampImg() 
   {
-    for (int i = 0; i < 164; i++) ChampionImgLink[i] = "assets/" + ChampionName[i] + ".webp";
+    for (int i = 0; i < CHAMPION_COUNT; i++) ChampionImgLink[i] = "assets/" + ChampionName[i] + ".webp";
   }
   
   Widget MakeOneLineCircleAvatar(BuildContext context, int startIndex, int endIndex)
@@ -48,7 +48,7 @@ class _ChampionsPageState extends State<ChampionsPage> {
     Color FontColor= Colors.white;
 
     //정렬 맞추기 위해 빈 부분은 깡통으로 채움
-    if(index>=164)
+    if(index>=CHAMPION_COUNT)
     {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4.0),
@@ -218,7 +218,7 @@ class _ChampionsPageState extends State<ChampionsPage> {
                       scrollDirection: Axis.vertical,
                       child: Column(
                         children: [
-                        //6*27 + 2 = 164개 챔피언, 밀리오 +나피리 추가
+                        //6*27 + 3 = 165개 챔피언, 밀리오 +나피리 + 브라이어 추가
                         for (int i = 0; i < 160; i += 5) MakeOneLineCircleAvatar(context, i, i + 5),
                         MakeOneLineCircleAvatar(context, 160, 165), //마지막줄이다 맨이야(헤카림)
                       ],
