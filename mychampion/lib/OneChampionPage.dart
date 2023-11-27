@@ -60,7 +60,8 @@ class _OneChampPageState extends State<OneChampPage> {
   
   Widget MakePatchContentContainer(int champNo, int index) {
     String UpdateDay="";
-    if(patchVerDataArr[champNo][index] == "13.22") UpdateDay=PatchNoteLinkPlusDay.link[15];
+    if(patchVerDataArr[champNo][index] == "13.23") UpdateDay=PatchNoteLinkPlusDay.link[16];
+    else if(patchVerDataArr[champNo][index] == "13.22") UpdateDay=PatchNoteLinkPlusDay.link[15];
     else if(patchVerDataArr[champNo][index] == "13.21") UpdateDay=PatchNoteLinkPlusDay.link[14];
     else if(patchVerDataArr[champNo][index] == "13.20") UpdateDay=PatchNoteLinkPlusDay.link[13];
     else if(patchVerDataArr[champNo][index] == "13.19") UpdateDay=PatchNoteLinkPlusDay.link[12];
