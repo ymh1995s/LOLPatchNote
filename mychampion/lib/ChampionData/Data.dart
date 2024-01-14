@@ -1,9 +1,8 @@
 //스트럭트로 하는게 나은가? 챔피언 이름, bool?
-//165개
 import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-const int CHAMPION_COUNT = 165;
+//166개 마지막 흐웨이
+const int CHAMPION_COUNT = 166;
 
 //영어이름으로 통일하기
 List<String> ChampionName =
@@ -35,7 +34,7 @@ List<String> ChampionName =
 "키아나","킨드레드","타릭","탈론","탈리야","탐켄치",
 "트런들","트리스타나","트린다미어","트위스티드페이트","트위치","티모",
 "파이크","판테온","피들스틱","피오라","피즈","하이머딩거",
-"헤카림"];
+"헤카림","흐웨이"];
 
 List<String> ChampionNameEn =
 ["Garen","Galio","Gangplank","Gragas","Graves","Gwen",
@@ -66,7 +65,7 @@ List<String> ChampionNameEn =
 "Qiyana","Kindred","Taric","Talon","Taliyah","TahmKench",
 "Trundle","Tristana","Tryndamere","TwistedFate","Twitch","Teemo",
 "Pyke","Pantheon","Fiddlesticks","Fiora","Fizz","Heimerdinger",
-"Hecarim"];
+"Hecarim","Hwei"];
 
 var ChampionImgLink = List<String>.filled(CHAMPION_COUNT,"");
 
@@ -81,7 +80,7 @@ List<bool> IsFavorite =[
   false,false,false,false,false,false,
   false,false,false,false,false,false,
   false,false,false,false,false,false,
-  false,false,false,false,false,false,
+  false,false,false,false,false,false, //60
   
   false,false,false,false,false,false,
   false,false,false,false,false,false,
@@ -92,7 +91,7 @@ List<bool> IsFavorite =[
   false,false,false,false,false,false,
   false,false,false,false,false,false,
   false,false,false,false,false,false,
-  false,false,false,false,false,false,
+  false,false,false,false,false,false, //120
   
   false,false,false,false,false,false,
   false,false,false,false,false,false,
@@ -100,8 +99,8 @@ List<bool> IsFavorite =[
   false,false,false,false,false,false,
   false,false,false,false,false,false,
   false,false,false,false,false,false,
-  false,false,false,false,false,false,  
-  false,false
+  false,false,false,false,false,false, //162
+  false,false,false,false              //166
 ];
 
 class PatchNoteLink{
@@ -172,7 +171,6 @@ class PatchNoteLinkDay{
   ];
 }
 
-
 class PatchNoteLinkPlus{
   //13.7 이후의 버전
   static List<String> link = [
@@ -191,9 +189,10 @@ class PatchNoteLinkPlus{
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-19-notes/",
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-20-notes/",
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-21-notes/",
-    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-22-notes/",
+    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-22-notes/", //15
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-23-notes/",
-    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-24-notes/",];
+    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-13-24-notes/",
+    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-14-1-notes/",];
 }
 
 class PatchNoteLinkPlusDay{
@@ -216,7 +215,8 @@ class PatchNoteLinkPlusDay{
     "2023-10-24",
     "2023-11-7",
     "2023-11-20",
-    "2023-12-6",];
+    "2023-12-6",
+    "2024-1-10",];
 }
 
 var patchVerDataArr = [
@@ -384,7 +384,8 @@ var patchVerDataArr = [
   PatchContent_Fiora.patchVer,
   PatchContent_Fizz.patchVer,
   PatchContent_Heimerdinger.patchVer,
-  PatchContent_Hecarim.patchVer
+  PatchContent_Hecarim.patchVer,
+  PatchContent_Hwei.patchVer
 ];
 
 var BorNorMDataArr = [
@@ -552,7 +553,8 @@ var BorNorMDataArr = [
   PatchContent_Fiora.BorNorM,
   PatchContent_Fizz.BorNorM,
   PatchContent_Heimerdinger.BorNorM,
-  PatchContent_Hecarim.BorNorM
+  PatchContent_Hecarim.BorNorM,
+  PatchContent_Hwei.BorNorM
 ];
 
 var patchNoteLinkArr = [
@@ -720,7 +722,8 @@ var patchNoteLinkArr = [
   PatchContent_Fiora.patchNoteLink,
   PatchContent_Fizz.patchNoteLink,
   PatchContent_Heimerdinger.patchNoteLink,
-  PatchContent_Hecarim.patchNoteLink
+  PatchContent_Hecarim.patchNoteLink,
+  PatchContent_Hwei.patchNoteLink
 ];
 
 var Detail_TitleArr = [
@@ -888,7 +891,8 @@ var Detail_TitleArr = [
   PatchContent_Fiora.Detail_Title,
   PatchContent_Fizz.Detail_Title,
   PatchContent_Heimerdinger.Detail_Title,
-  PatchContent_Hecarim.Detail_Title
+  PatchContent_Hecarim.Detail_Title,
+  PatchContent_Hwei.Detail_Title
 ];
 
 var Detail_ContentArr = [
@@ -1056,7 +1060,8 @@ var Detail_ContentArr = [
   PatchContent_Fiora.Detail_Content,
   PatchContent_Fizz.Detail_Content,
   PatchContent_Heimerdinger.Detail_Content,
-  PatchContent_Hecarim.Detail_Content
+  PatchContent_Hecarim.Detail_Content,
+  PatchContent_Hwei.Detail_Content
 ];
 
 
@@ -2234,6 +2239,19 @@ class PatchContent_Heimerdinger{
   
   [["일반 포탑 - 체력 150~575 (+주문력의 5~40%) (레벨에 따라) ⇒ 175~700 (+주문력의 5~40%) (레벨에 따라)", "일반 포탑 - 마법 피해량 6/9/12/15/18 (+주문력의 35%) ⇒ 7/11/15/19/23 (+주문력의 35%)"],
   ["재사용 대기시간 12초 ⇒ 11초"]]];
+}
+
+//흐웨이 14.1 합류
+class PatchContent_Hwei{
+  static List<String> BorNorM=["상향"];
+  static List<String> patchVer=["14.1"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[18]];
+  static List<List<String>> Detail_Title =[
+      ["기본 능력치"],
+    ];
+  static List<List<List<String>>> Detail_Content =[
+    [["기본 방어력: 18 ⇒ 21"]],
+  ];
 }
 
 //일라오이
@@ -4990,18 +5008,23 @@ class PatchContent_Veigar{
 
 //벨코즈
 class PatchContent_Velkoz{
-  static List<String> BorNorM=["상향", "상향"];
-  static List<String> patchVer=["13.23", "12.8"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[16],PatchNoteLink.link[21]];
+  static List<String> BorNorM=["조정","상향", "상향"];
+  static List<String> patchVer=["14.1", "13.23", "12.8"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[18],PatchNoteLinkPlus.link[16],PatchNoteLink.link[21]];
   static List<List<String>> Detail_Title =[
+    ["E - 지각 붕괴"],
     ["기본 지속 효과 - 유기물 분해"],
-    ["Q - 플라즈마 분열","W - 공허 균열"]];
+    ["Q - 플라즈마 분열","W - 공허 균열"]
+    ];
 
   static List<List<List<String>>> Detail_Content =[
+     [["투사체 위치 도달 시간: 0.55초 (고정) ⇒ 0.25~0.55초 (이동 거리에 따라)", "그렇게 빨린 안되지: 이제 벨코즈 E - 지각 붕괴의 원형 스킬 표시가 스킬을 사용한 직후가 아닌 스킬을 사용하고 0.25초 후 생성됩니다."]],
+
     [["3회 중첩 시 피해량: 33~169 (레벨에 따라) (+주문력의 50%) ⇒ 35~180 (레벨에 따라) (+주문력의 60%)"]],
 
     [["마법 피해량 80/120/160/200/240 (+주문력의 80%) ⇒ 80/120/160/200/240 (+주문력의 90%)"],
-  ["1차 마법 피해량 30/50/70/90/110 (+주문력의 15%) ⇒ 30/50/70/90/110 (+주문력의 20%)"]]];
+    ["1차 마법 피해량 30/50/70/90/110 (+주문력의 15%) ⇒ 30/50/70/90/110 (+주문력의 20%)"]]
+  ];
 }
 
 //벡스
@@ -5562,7 +5585,7 @@ class IsFavorite_SharedPreferencess extends ChangeNotifier {
     false,false,false,false,false,false,
     false,false,false,false,false,false,
     false,false,false,false,false,false,
-    false,false,false,false,false,false,
+    false,false,false,false,false,false, //60
     
     false,false,false,false,false,false,
     false,false,false,false,false,false,
@@ -5573,7 +5596,7 @@ class IsFavorite_SharedPreferencess extends ChangeNotifier {
     false,false,false,false,false,false,
     false,false,false,false,false,false,
     false,false,false,false,false,false,
-    false,false,false,false,false,false,
+    false,false,false,false,false,false, //120
     
     false,false,false,false,false,false,
     false,false,false,false,false,false,
@@ -5581,7 +5604,7 @@ class IsFavorite_SharedPreferencess extends ChangeNotifier {
     false,false,false,false,false,false,
     false,false,false,false,false,false,
     false,false,false,false,false,false,
-    false,false,false,false,false,false,  
-    false,false,false
+    false,false,false,false,false,false, //162
+    false,false,false,false              //166
   ];
 }

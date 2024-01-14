@@ -218,9 +218,9 @@ class _ChampionsPageState extends State<ChampionsPage> {
                       scrollDirection: Axis.vertical,
                       child: Column(
                         children: [
-                        //6*27 + 3 = 165개 챔피언, 밀리오 +나피리 + 브라이어 추가
-                        for (int i = 0; i < 160; i += 5) MakeOneLineCircleAvatar(context, i, i + 5),
-                        MakeOneLineCircleAvatar(context, 160, 165), //마지막줄이다 맨이야(헤카림)
+                        //166개 챔피언, +흐웨이 추가
+                        for (int i = 0; i < 165; i += 5) MakeOneLineCircleAvatar(context, i, i + 5),
+                        MakeOneLineCircleAvatar(context, 165, 170), //마지막줄이다 맨이야(헤카림)
                       ],
                       ),
                     ),
