@@ -198,6 +198,7 @@ class PatchNoteLinkPlus{
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-14-4-notes/", //21
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-14-5-notes/", //22
     "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-14-6-notes/", //23
+    "https://www.leagueoflegends.com/ko-kr/news/game-updates/patch-14-7-notes/", //24
     ];
 }
 
@@ -227,7 +228,8 @@ class PatchNoteLinkPlusDay{
     "2024-2-7",
     "2024-2-21",
     "2024-3-6",
-    "2024-3-20",];
+    "2024-3-20",
+    "2024-4-3",];
 }
 
 var patchVerDataArr = [
@@ -1768,15 +1770,20 @@ class PatchContent_Caitlyn{
 
 //카밀
 class PatchContent_Camille{
-  static List<String> BorNorM=["상향", "상향", "상향","하향"];
-  static List<String> patchVer=["14.2","13.15", "12.17","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[18],PatchNoteLinkPlus.link[8], PatchNoteLink.link[12], PatchNoteLink.link[19]];
+  static List<String> BorNorM=["조정", "상향", "상향", "상향","하향"];
+  static List<String> patchVer=["14.7", "14.2","13.15", "12.17","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[18],PatchNoteLinkPlus.link[8], PatchNoteLink.link[12], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
+    ["Q - 정확성 프로토콜","W - 전술적 휩쓸기", "E - 갈고리 발사"],
     ["기본 능력치", "기본 지속 효과 - 적응형 방어 체계", "Q - 정확성 프로토콜"],
   ["기본 능력치", "R - 마법공학 최후통첩"],
   ["기본 지속 효과 - 적응형 방어 체계","E - 갈고리 발사/갈고리 돌진"],
   ["기본 지속 효과 - 적응형 방어체계"]];
   static List<List<List<String>>> Detail_Content =[
+    [["추가 이동 속도: 30/32.5/35/37.5/40% ⇒ 30/35/40/45/50%", "재사용 대기시간: 9/8.25/7.5/6.75/6초 ⇒ 9/8/7/6/5초"],
+    ["원뿔 바깥쪽 기본 피해량: 최대 체력의 5/5.5/6/6.5/7% ⇒ 6/6.5/7/7.5/8%"],
+    ["피해량: 80/110/140/170/200 (+추가 공격력의 90%) ⇒ 60/90/120/150/180 (+추가 공격력의 90%)"]],
+
     [["기본 체력: 646 ⇒ 670"],
     ["재사용 대기시간: 20/15/10초 (1/7/13레벨에서) ⇒ 18/14/10초 (1/7/13레벨에서)"],
     ["추가 이동 속도: 20/25/30/35/40% ⇒ 30/32.5/35/37.5/40%"]],
@@ -2082,15 +2089,18 @@ class PatchContent_Fiddlesticks{
 
 //피오라
 class PatchContent_Fiora{
-  static List<String> BorNorM=["하향", "하향","하향","하향"];
-  static List<String> patchVer=["14.4", "13.1","12.12","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[21], PatchNoteLink.link[5],PatchNoteLink.link[17], PatchNoteLink.link[19]];
+  static List<String> BorNorM=["하향", "하향", "하향","하향","하향"];
+  static List<String> patchVer=["14.7", "14.4", "13.1","12.12","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[21], PatchNoteLink.link[5],PatchNoteLink.link[17], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
+    ["기본 능력치"],
     ["W - 응수"],
     ["기본 지속 효과 - 치명적인 검무","Q - 찌르기"],
   ["기본 지속 효과 - 치명적인 검무"],
   ["기본 지속 효과 - 치명적인 검무", "R - 대결투"]];
   static List<List<List<String>>> Detail_Content =[
+    [["공격력: 68 ⇒ 66"]],
+
     [["공격 속도 둔화율: 2초 동안 50% ⇒ 2초 동안 25%"]],
 
     [["대상 최대 체력 비례 피해 공격력 계수: 공격력 100당 최대 체력의 4.5% 고정 피해 ⇒ 공격력 100당 최대 체력의 4% 고정 피해"],
@@ -2130,10 +2140,11 @@ class PatchContent_Fizz{
 
 //갈리오
 class PatchContent_Galio{
-  static List<String> BorNorM=["조정", "상향", "상향", "상향", "상향","상향","하향"];
-  static List<String> patchVer=["14.6", "13.24", "13.20", "13.19", "13.6","12.13","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[17],PatchNoteLinkPlus.link[13], PatchNoteLinkPlus.link[12], PatchNoteLink.link[0],PatchNoteLink.link[16], PatchNoteLink.link[19]];
+  static List<String> BorNorM=["상향", "조정", "상향", "상향", "상향", "상향","상향","하향"];
+  static List<String> patchVer=["14.7", "14.6", "13.24", "13.20", "13.19", "13.6","12.13","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[17],PatchNoteLinkPlus.link[13], PatchNoteLinkPlus.link[12], PatchNoteLink.link[0],PatchNoteLink.link[16], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
+    ["기본 지속 효과 - 석상의 강타", "W - 듀란드의 방패", "E - 정의의 주먹"],
     ["기본 지속 효과 - 석상의 강타", "Q - 전장의 돌풍", "W - 듀란드의 방패", "E - 정의의 주먹"],
     ["Q - 전장의 돌풍"],
     ["W - 듀란드의 방패"],
@@ -2142,6 +2153,10 @@ class PatchContent_Galio{
   ["Q - 전장의 돌풍"],
   ["W - 듀란드의 방패"]];
   static List<List<List<String>>> Detail_Content =[
+    [["마법 피해량: 15~115 (레벨에 따라) (+공격력의 100%) (+주문력의 40%) (+추가 마법 저항력의 60%) ⇒ 15~115 (레벨에 따라) (+공격력의 100%) (+주문력의 45%) (+추가 마법 저항력의 60%)"],
+    ["받는 마법 피해 감소량 (물리 피해는 절반만 적용): 20/25/30/35/40 (+추가 마법 저항력 100당 4%) (+추가 체력 100당 1%) ⇒ 25/30/35/40/45% (+주문력 100당 4%) (+추가 마법 저항력 100당 8%) (+추가 체력 100당 1%)"],
+    ["피해량: 75/115/155/195/235 (+주문력의 90%) ⇒ 90/130/170/210/250 (+주문력의 90%)"]],
+
     [["마법 피해량: 15~200 (레벨에 따라) (+공격력의 100%) (+주문력의 50%) (+추가 마법 저항력의 60%) ⇒ 15~115 (레벨에 따라) (+공격력의 100%) (+주문력의 40%) (+추가 마법 저항력의 60%)", "(신규) 갈리오의 스킬이 적 챔피언 또는 에픽 몬스터에게 적중하면 기본 지속 효과 - 석상의 강타 재사용 대기시간이 3초 감소합니다. 재사용 대기시간은 스킬 사용 한 번당 한 번만 감소합니다.", "(신규) 이제 기본 지속 효과 - 석상의 강타로 마법 아이템 효과가 발동됩니다.", "(신규) 이제 갈리오는 기본 지속 효과 - 석상의 강타를 사용할 수 있을 때 공격 속도가 40% 상승합니다.", "(삭제) 기본 지속 효과 - 석상의 강타는 더 이상 스킬 가속에 영향을 받지 않습니다."],
     ["마법 피해량: 70/105/140/175/210 (+주문력의 75%) ⇒ 70/105/140/175/210 (+주문력의 70%)", "재사용 대기시간: 12/11/10/9/8초 ⇒ 12/10.75/9.5/8.25/7초"],
     ["받는 마법 피해 감소량: 25/30/35/40/45% (+주문력 100당 5%) (+추가 마법 저항력 100당 12%) ⇒ 20/25/30/35/40% (+주문력 100당 4%) (+추가 마법 저항력 100당 8%) (+추가 체력 100당 1%)", "최소 마법 피해량: 20/35/50/65/80 (+주문력의 30%) ⇒ 20/30/40/50/60 (+주문력의 30%)"],
@@ -2814,10 +2829,11 @@ class PatchContent_Kalista{
 
 //카르마
 class PatchContent_Karma{
-  static List<String> BorNorM=["하향", "하향", "상향", "상향", "하향"];
-  static List<String> patchVer=["14.6", "14.3", "14.2", "13.16", "12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[20],PatchNoteLinkPlus.link[18],PatchNoteLinkPlus.link[9], PatchNoteLink.link[19]];
+  static List<String> BorNorM=["상향", "하향", "하향", "상향", "상향", "하향"];
+  static List<String> patchVer=["14.7", "14.6", "14.3", "14.2", "13.16", "12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[20],PatchNoteLinkPlus.link[18],PatchNoteLinkPlus.link[9], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
+    ["W - 굳은 결의", "R - 만트라"],
     ["기본 능력치", "기본 지속 효과 - 열정 응집", "Q - 내면의 열정", "R - 만트라"],
     ["R - 만트라"],
     ["기본 능력치", "Q - 내면의 열정", "E - 고무"],
@@ -2825,6 +2841,9 @@ class PatchContent_Karma{
     ["W - 굳은 결의","E - 고무"]];
 
   static List<List<List<String>>> Detail_Content =[
+    [["속박 지속시간: 1.4/1.55/1.7/1.85/2초 ⇒ 1.6/1.7/1.8/1.9/2초"],
+    ["R - 만트라 + E - 저항 광역 보호막 흡수량: 39~129 (E - 고무 및 R - 만트라 스킬 레벨에 따라) (+주문력의 31.5%) ⇒ 45/81/117/153 (R - 만트라 스킬 레벨에 따라) (+주문력의 40.5%) (참고: 이동 속도 및 단일 대상 보호막 흡수량은 전과 동일합니다.)"]],
+
     [["마나 증가량: 50 ⇒ 40", "마나 재생 증가량: 0.5 ⇒ 0.8"],
     ["돌려받는 재사용 대기시간: 5초 ⇒ 4초"],
     ["마나 소모량: 45 ⇒ 40/50/60/70/80"],
@@ -2944,12 +2963,13 @@ class PatchContent_Kayle{
 
 //케인
 class PatchContent_Kayn{
-  static List<String> BorNorM=["조정", "상향", "하향", "하향", "하향","상향","상향","하향","조정", "하향","하향"];
-  static List<String> patchVer=["14.6", "14.5", "13.18", "13.7", "13.8","13.3","12.23","12.18","12.14","12.11","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[22],PatchNoteLinkPlus.link[11],PatchNoteLinkPlus.link[10], PatchNoteLinkPlus.link[1],PatchNoteLink.link[3],PatchNoteLink.link[6],
+  static List<String> BorNorM=["상향", "조정", "상향", "하향", "하향", "하향","상향","상향","하향","조정", "하향","하향"];
+  static List<String> patchVer=["14.7", "14.6", "14.5", "13.18", "13.7", "13.8","13.3","12.23","12.18","12.14","12.11","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[22],PatchNoteLinkPlus.link[11],PatchNoteLinkPlus.link[10], PatchNoteLinkPlus.link[1],PatchNoteLink.link[3],PatchNoteLink.link[6],
   PatchNoteLink.link[11],PatchNoteLink.link[15]
   , PatchNoteLink.link[18], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
+    ["Q - 살상돌격"],
     ["Q - 살상돌격", "R - 그림자의 지배"],
     ["기본 지속 효과 - 다르킨의 낫", "R - 그림자의 지배"],
     ["본 지속 효과 - 다르킨의 낫","R - 그림자의 지배"],
@@ -2962,6 +2982,8 @@ class PatchContent_Kayn{
   ["Q - 살상돌격 (다르킨 학살자 형태)"],
   ["다르킨 학살자 기본 지속 효과 - 다르킨의 낫", "E - 그림자의 길","다르킨 학살자 R - 그림자의 지배"]];
   static List<List<List<String>>> Detail_Content =[
+    [["피해량: 75/95/115/135/155 (+추가 공격력의 80%) ⇒ 75/95/115/135/155 (+추가 공격력의 85%)"]],
+
     [["다르킨 학살자 - 적중 1회당 피해량: 총공격력의 65% + 대상 최대 체력의 5(+추가 공격력의 3.5%)% ⇒ 총공격력의 65% + 대상 최대 체력의 6(+추가 공격력의 3.5%)%", "(신규) 이제 Q - 살상돌격의 애니메이션이 출력되는 동안 케인은 사용 아이템을 쓸 수 없습니다."],
     ["피해량: 150/250/350 (+추가 공격력의 175%) ⇒ 150/250/350 (+추가 공격력의 150%) (참고: 이 변경은 다르킨 학살자 형태의 궁극기 피해량에 영향을 끼치지 않습니다.)"]],
 
@@ -3430,16 +3452,20 @@ class PatchContent_Lulu{
 
 //럭스
 class PatchContent_Lux{
-  static List<String> BorNorM=["상향", "상향", "상향","하향"];
-  static List<String> patchVer=["14.1", "13.17", "12.23","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[18],PatchNoteLinkPlus.link[10], PatchNoteLink.link[6],  PatchNoteLink.link[19]];
+  static List<String> BorNorM=["상향", "상향", "상향", "상향","하향"];
+  static List<String> patchVer=["14.7", "14.1", "13.17", "12.23","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[18],PatchNoteLinkPlus.link[10], PatchNoteLink.link[6],  PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
+    ["기본 지속 효과 - 광채", "Q - 빛의 속박"],
     ["기본 능력치","W - 프리즘 보호막"],
     ["기본 능력치", "기본 지속 효과 - 광채", "Q - 빛의 속박", "E - 광휘의 특이점"],
     ["E - 광휘의 특이점", "R - 최후의 섬광"],
   ["W - 프리즘 보호막"]];
 
   static List<List<List<String>>> Detail_Content =[
+    [["마법 피해량: 30~200 (레벨에 따라) (+주문력의 25%) ⇒ 30~200 (레벨에 따라) (+주문력의 30%)"],
+    ["마법 피해량: 80/120/160/200/240 (+주문력의 60%) ⇒ 80/120/160/200/240 (+주문력의 65%)"]],
+
     [["기본 체력: 560 ⇒ 580", "기본 방어력: 19 ⇒ 21", "공격 속도 증가량: 2% ⇒ 3%"],
     ["흡수량: 40/55/70/85/100 (+주문력의 35%) ⇒ 40/55/70/85/100 (+주문력의 40%)"]],
 
@@ -3741,11 +3767,12 @@ class PatchContent_Morgana{
 
 //나미
 class PatchContent_Nami{
-  static List<String> BorNorM=["상향", "하향","하향","하향","상향","조정"];
-  static List<String> patchVer=["13.15", "13.1B","12.17","12.10","12.4","12.3"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[8], PatchNoteLink.link[4],PatchNoteLink.link[12], PatchNoteLink.link[19],
+  static List<String> BorNorM=["상향", "상향", "하향","하향","하향","상향","조정"];
+  static List<String> patchVer=["14.7", "13.15", "13.1B","12.17","12.10","12.4","12.3"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[8], PatchNoteLink.link[4],PatchNoteLink.link[12], PatchNoteLink.link[19],
   PatchNoteLink.link[25],PatchNoteLink.link[26]];
   static List<List<String>> Detail_Title =[
+    ["W - 밀물 썰물", "E - 파도 소환사의 축복"],
   ["기본 지속 효과 - 밀려오는 파도", "Q - 물의 감옥"],
   ["W - 밀물 썰물","E - 파도 소환사의 축복"],
   ["E - 파도 소환사의 축복"],
@@ -3753,6 +3780,9 @@ class PatchContent_Nami{
   ["E - 파도 소환사의 축복"],
   ["기본 지속 효과 - 밀려오는 파도","E - 파도 소환사의 축복"]];
   static List<List<List<String>>> Detail_Content =[
+    [["마법 피해량: 60/100/140/180/220 (+주문력의 55%) ⇒ 60/95/130/165/200 (+주문력의 50%)", "체력 회복량: 55/75/95/115/135 (+주문력의 25%) ⇒ 55/80/105/130/155 (+주문력의 40%)", "튕길 시 감소량: -15% (+주문력 100당 7.5%) ⇒ -10% (+주문력 100당 10%)"],
+    ["마법 피해량: 20/35/50/65/80 (+주문력의 20%) ⇒ 20/30/40/50/60 (+주문력의 20%)"]],
+    
   [["추가 이동 속도: 90 (+주문력의 20%) ⇒ 100 (+주문력의 25%)"],
   ["마법 피해량: 75/130/185/240/295 (+주문력의 50%) ⇒ 90/145/200/255/310 (+주문력의 50%)"]],
     
@@ -3771,14 +3801,18 @@ class PatchContent_Nami{
 
 //나서스
 class PatchContent_Nasus{
-  static List<String> BorNorM=["상향", "상향","하향"];
-  static List<String> patchVer=["13.12","12.19","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[5], PatchNoteLink.link[10], PatchNoteLink.link[19]];
+  static List<String> BorNorM=["상향", "상향", "상향","하향"];
+  static List<String> patchVer=["14.7", "13.12","12.19","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[5], PatchNoteLink.link[10], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
+    ["기본 지속 효과 - 영혼의 포식자", "Q - 흡수의 일격"],
     ["기본 지속 효과 - 영혼의 포식자", "R - 사막의 분노"],
     ["Q - 흡수의 일격","W - 쇠약","R - 사막의 분노"],
   ["기본 지속 효과 - 영혼의 포식자"]];
   static List<List<List<String>>> Detail_Content =[
+    [["생명력 흡수: 11/16/21% (레벨에 따라) ⇒ 12/18/24% (레벨에 따라)"],
+    ["추가 물리 피해량: 30/50/70/90/110 (+흡수의 일격 중첩 수) ⇒ 40/60/80/100/120 (+흡수의 일격 중첩 수)"]],
+
     [["생명력 흡수: 9/14/19% ⇒ 11/16/21%"], 
     ["재사용 대기시간: 120초 ⇒ 120/100/80초"]],
     
@@ -3979,16 +4013,24 @@ class PatchContent_Nunu{
 
 //올라프
 class PatchContent_Olaf{
-  static List<String> BorNorM=["하향","상향","조정","하향","조정"];
-  static List<String> patchVer=["13.7", "12.13","12.11","12.10","12.9"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[0], PatchNoteLink.link[16],PatchNoteLink.link[18],
+  static List<String> BorNorM=["상향", "하향","상향","조정","하향","조정"];
+  static List<String> patchVer=["14.7", "13.7", "12.13","12.11","12.10","12.9"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[0], PatchNoteLink.link[16],PatchNoteLink.link[18],
   PatchNoteLink.link[19],PatchNoteLink.link[20]];
-  static List<List<String>> Detail_Title =[["기본 지속 효과 - 광전사의 분노","Q - 역류"],
+  static List<List<String>> Detail_Title =[
+    ["Q - 역류", "W - 버티기", "E - 무모한 강타", "R - 라그나로크"],
+    ["기본 지속 효과 - 광전사의 분노","Q - 역류"],
   ["기본 능력치", "기본 지속 효과 - 광전사의 분노","Q - 역류"],
   ["기본 지속 효과 - 광전사의 분노", "Q - 역류","W - 버티기", "R - 라그나로크"],
   ["W - 버티기"],
   ["기본 능력치", "기본 지속 효과 - 광전사의 분노", "Q - 역류", "W - 버티기", "R - 라그나로크"]];
-  static List<List<List<String>>> Detail_Content =[[["공격 속도: 60~100% (레벨에 따라) ⇒ 50~100% (레벨에 따라)"],
+  static List<List<List<String>>> Detail_Content =[
+    [["(신규) 추가 몬스터 피해량: 5/10/15/20/25"],
+    ["추가 공격 속도 지속시간: 4초 ⇒ 5초", "마나 소모량: 30 ⇒ 50"],
+    ["돌려받는 재사용 대기시간: 기본 공격당 1초 ⇒ 기본 공격당 1초, 몬스터 대상 기본 공격당 2초"],
+    ["마나 소모량: 0 ⇒ 100"]],
+    
+    [["공격 속도: 60~100% (레벨에 따라) ⇒ 50~100% (레벨에 따라)"],
   ["물리 피해량: 70/120/170/220/270 (+추가 공격력의 100%) ⇒ 65/115/165/215/265 (+추가 공격력의 100%)"]],
   
   [["체력 재생 8.5 ⇒ 6.5","체력 재생 증가량 0.9 ⇒ 0.6", "18레벨 체력 재생 23.8 ⇒ 16.7"],
@@ -4245,10 +4287,11 @@ class PatchContent_Rammus{
 
 //렉사이
 class PatchContent_RekSai{
-  static List<String> BorNorM=["조정", "상향", "조정", "하향", "하향", "하향", "하향", "상향","하향","하향"];
-  static List<String> patchVer=["14.6", "14.5", "14.4", "13.19", "13.16","13.14", "13.13", "13.11", "12.19","12.1"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[22],PatchNoteLinkPlus.link[21], PatchNoteLinkPlus.link[12], PatchNoteLinkPlus.link[9], PatchNoteLinkPlus.link[7], PatchNoteLinkPlus.link[6], PatchNoteLinkPlus.link[4], PatchNoteLink.link[10],PatchNoteLink.link[28]];
+  static List<String> BorNorM=["하향", "조정", "상향", "조정", "하향", "하향", "하향", "하향", "상향","하향","하향"];
+  static List<String> patchVer=["14.7", "14.6", "14.5", "14.4", "13.19", "13.16","13.14", "13.13", "13.11", "12.19","12.1"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[22],PatchNoteLinkPlus.link[21], PatchNoteLinkPlus.link[12], PatchNoteLinkPlus.link[9], PatchNoteLinkPlus.link[7], PatchNoteLinkPlus.link[6], PatchNoteLinkPlus.link[4], PatchNoteLink.link[10],PatchNoteLink.link[28]];
   static List<List<String>> Detail_Title =[
+    ["기본 지속 효과 - 제르사이의 분노"],
     ["W - 매복", "R - 공허의 돌진"],
     ["기본 능력치", "Q - 여왕의 진노", "W - 매복 / 돌출", "E - 땅굴 파기", "E - 성난 이빨", "R - 공허의 돌진"],
     ["기본 능력치", "기본 지속 효과 - 제르사이의 분노", "Q - 여왕의 진노 (돌출 상태)", "Q - 먹잇감 추적 (매복 상태)", "W - 매복", "W - 돌출", "E - 땅굴 파기", "E - 성난 이빨", "R - 공허의 돌진"],
@@ -4261,6 +4304,8 @@ class PatchContent_RekSai{
   ["E - 성난 이빨", "E - 땅굴 파기"]];
 
   static List<List<List<String>>> Detail_Content =[
+    [["미니언, 와드, 식물 대상 분노 획득량: 12.5 ⇒ 5", "체력 회복량: 최대 체력의 12~20% (레벨에 따라) ⇒ 10~20% (레벨에 따라)"]],
+
     [["버그 수정: 이제 우클릭으로 공격 시 언제나 주 대상에게 피해를 입히고 공중으로 띄웁니다. 밀리오 또는 고속 연사포로 인해 사거리가 늘어난 경우에도 동일하게 적용됩니다. 이 부분은 14.5 패치 기간에 추가 패치로 일부 수정되었습니다."],
     ["편의성 개선 업데이트: 이제 R - 공허의 돌진을 사용 사거리 밖에서 미리 입력할 수 있으며, 미리 입력 시 렉사이는 스킬 사용 사거리까지 이동합니다.", "버그 수정: 렉사이가 R - 공허의 돌진을 사용한 직후에 기절당하면 스킬이 취소되던 버그를 수정했습니다."]],
 
@@ -4306,11 +4351,12 @@ class PatchContent_RekSai{
 
 //렐
 class PatchContent_Rell{
-  static List<String> BorNorM=["하향", "조정", "하향", "조정", "하향", "조정", "상향","하향"];
-  static List<String> patchVer=["13.18", "13.15", "13.14", "13.13", "13.12", "13.11","12.17","12.10"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[11],PatchNoteLinkPlus.link[8], PatchNoteLinkPlus.link[7], PatchNoteLinkPlus.link[6], PatchNoteLinkPlus.link[5], PatchNoteLinkPlus.link[4], 
+  static List<String> BorNorM=["하향", "하향", "조정", "하향", "조정", "하향", "조정", "상향","하향"];
+  static List<String> patchVer=["14.7", "13.18", "13.15", "13.14", "13.13", "13.12", "13.11","12.17","12.10"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[11],PatchNoteLinkPlus.link[8], PatchNoteLinkPlus.link[7], PatchNoteLinkPlus.link[6], PatchNoteLinkPlus.link[5], PatchNoteLinkPlus.link[4], 
   PatchNoteLink.link[12], PatchNoteLink.link[19]];
   static List<List<String>> Detail_Title =[
+    ['기본 능력치', "Q - 파열의 일격", "W - 붕괴/탑승", "E - 전속력"],
     ["E - 전속력"],
   ["기본 지속 효과 - 갑옷 파쇄", "Q - 파열의 일격", "W - 철마술: 탑승"],
     ["기본 능력치", "기본 지속 효과 - 갑옷 파쇄"],
@@ -4321,6 +4367,11 @@ class PatchContent_Rell{
   ["Q - 파멸의 일격", "W - 철마술 (붕괴)"]];
 
   static List<List<List<String>>> Detail_Content =[
+    [["마법 저항력 증가량: 1.85 ⇒ 2.05"],
+    ["추가 몬스터 피해량: 삭제"],
+    ["W - 붕괴 추가 몬스터 피해량: 삭제", "W - 탑승 추가 몬스터 피해량: 삭제"],
+    ["추가 몬스터 피해량: 삭제"]],
+
     [["추가 이동 속도 (적에게서 멀어질 경우): 15/17.5/20/22.5/25% ⇒ 12/14/16/18/20%", "추가 이동 속도 (적에게 접근할 경우): 30/35/40/45/50% ⇒ 24/28/32/36/40%"]],
 
   [["일관성이 핵심: 이제 모든 스킬 및 기본 공격이 피해를 먼저 입힌 후 기본 지속 효과 - 갑옷 파쇄를 적용합니다. (참고: 이전에는 Q - 파열의 일격과 W - 철마술: 탑승 그리고 R - 자기 폭풍이 기본 지속 효과 - 갑옷 파쇄를 적용한 후 피해를 입혔으며 E - 전속력과 기본 공격은 그 반대로 작동했습니다.)"],
@@ -4773,15 +4824,19 @@ class PatchContent_Shyvana{
 
 //스몰더 14.3 합류
 class PatchContent_Smolder{
-  static List<String> BorNorM=["하향", "조정", "조정"];
-  static List<String> patchVer=["14.6", "14.5", "14.4"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[22],PatchNoteLinkPlus.link[21]];
+  static List<String> BorNorM=["상향", "하향", "조정", "조정"];
+  static List<String> patchVer=["14.7", "14.6", "14.5", "14.4"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[22],PatchNoteLinkPlus.link[21]];
   static List<List<String>> Detail_Title =[
+    ["기본 능력치", "Q - 초강력 화염 숨결"],
     ["Q - 초강력 화염 숨결", "W - 에취!", "E - 펄럭펄럭"],
     ["Q - 초강력 화염 숨결", "E - 펄럭펄럭", "R - 엄마아아아!"],
     ["Q - 초강력 화염 숨결", "W - 에취!", "R - 엄마아아아!"]];
 
   static List<List<List<String>>> Detail_Content =[
+    [["방어력: 24 ⇒ 26"],
+    ["치명타 확률 비례 추가 물리 피해량: 0~30% ⇒ 0~50%"]],
+
     [["처형 기준값: 2% (+중첩당 0.025%) ⇒ 6.5% (참고: 용 훈련 225회 중첩 시 기존 처형 기준값은 7.625%입니다.)", "처형 조건: 스몰더가 유닛을 처형하려면 직접 피해를 입혀야 하며, 더 이상 아군이 입힌 피해로 처형되지 않습니다."],
     ["투사체 범위: 125 ⇒ 115"],
     ["이동 속도: 100% ⇒ 75%"]],
@@ -4894,13 +4949,21 @@ class PatchContent_Skarner{
 
 //소나
 class PatchContent_Sona{
-  static List<String> BorNorM=["상향","하향","하향"];
-  static List<String> patchVer=["12.19","12.10","12.1"];
-  static List<String> patchNoteLink= [PatchNoteLink.link[10], PatchNoteLink.link[19],PatchNoteLink.link[28]];
-  static List<List<String>> Detail_Title =[["Q - 용맹의 찬가","E - 기민함의 노래"],
+  static List<String> BorNorM=["상향", "상향","하향","하향"];
+  static List<String> patchVer=["14.7",  "12.19","12.10","12.1"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLink.link[10], PatchNoteLink.link[19],PatchNoteLink.link[28]];
+  static List<List<String>> Detail_Title =[
+    ["기본 지속 효과 - 파워 코드", "Q - 용맹의 찬가", "W - 인내의 아리아", "E - 기민함의 노래"],
+    ["Q - 용맹의 찬가","E - 기민함의 노래"],
   ["W - 인내의 아리아"],
   ["기본 능력치","E - 기민함의 노래"]];
-  static List<List<List<String>>> Detail_Content =[[["기본 피해량: 40/70/100/130/160 ⇒ 50/80/110/140/170"],
+  static List<List<List<String>>> Detail_Content =[
+    [["스타카토 추가 피해량: 40% ⇒ 50%"],
+    ["아군 추가 마법 피해량: 10/15/20/25/30 (+주문력의 20%) ⇒ 10/15/20/25/30 (+주문력의 10%)"],
+    ["체력 회복량: 30/45/60/75/90 (+주문력의 15%) ⇒ 30/45/60/75/90 (+주문력의 30%)"],
+    ["아군 이동 속도: 10/11/12/13/14% (+주문력 100당 2%) ⇒ 10/12/14/16/18% (+주문력 100당 2%)"]],
+    
+    [["기본 피해량: 40/70/100/130/160 ⇒ 50/80/110/140/170"],
   ["파워 코드 둔화율: 40% (+주문력 100당 4%) ⇒ 50% (+주문력 100당 4%)"]],
   
   [["보호막 흡수량 25/50/75/100/125 (+주문력의 30%) ⇒ 25/45/65/85/105 (+주문력의 25%)", "체력 회복량 30/50/70/90/110 (+주문력의 20%) ⇒ 30/45/60/75/90 (+주문력의 15%)"]],
@@ -4965,17 +5028,20 @@ class PatchContent_Swain{
 
 //사일러스
 class PatchContent_Sylas{
-  static List<String> BorNorM=["상향", "하향","상향","하향","상향"];
-  static List<String> patchVer=["13.16", "12.17","12.11","12.10","12.8"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[9],PatchNoteLink.link[12],PatchNoteLink.link[18], PatchNoteLink.link[19],
+  static List<String> BorNorM=["상향", "상향", "하향","상향","하향","상향"];
+  static List<String> patchVer=["14.7", "13.16", "12.17","12.11","12.10","12.8"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[9],PatchNoteLink.link[12],PatchNoteLink.link[18], PatchNoteLink.link[19],
   PatchNoteLink.link[21]];
   static List<List<String>> Detail_Title =[
+    ["재사용 대기시간: 140/120/100 ⇒ 160/135/110"],
     ["기본 능력치"],
     ["기본 능력치","Q - 사슬 후려치기"],
   ["W - 국왕시해자", "E - 도주/억압"],
   ["W - 국왕시해자"],
   ["R - 강탈"]];
   static List<List<List<String>>> Detail_Content =[
+    [["미니언 및 몬스터 대상 피해량: 40% ⇒ 미니언 대상 40%, 몬스터 대상 70%"]],
+
     [["기본 마나: 310 ⇒ 400"]],
 
     [["기본 체력 595 ⇒ 575"],
@@ -5610,10 +5676,11 @@ class PatchContent_Vladimir{
 
 //볼리베어
 class PatchContent_Volibear{
-  static List<String> BorNorM=["하향", "상향", "상향", "상향","하향","하향","상향"];
-  static List<String> patchVer=["14.6", "14.4", "13.14", "13.9","12.13","12.10","12.2"];
-  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[21], PatchNoteLinkPlus.link[7], PatchNoteLinkPlus.link[2],PatchNoteLink.link[16], PatchNoteLink.link[19],PatchNoteLink.link[27]];
+  static List<String> BorNorM=["하향", "하향", "상향", "상향", "상향","하향","하향","상향"];
+  static List<String> patchVer=["14.7", "14.6", "14.4", "13.14", "13.9","12.13","12.10","12.2"];
+  static List<String> patchNoteLink= [PatchNoteLinkPlus.link[24],PatchNoteLinkPlus.link[23],PatchNoteLinkPlus.link[21], PatchNoteLinkPlus.link[7], PatchNoteLinkPlus.link[2],PatchNoteLink.link[16], PatchNoteLink.link[19],PatchNoteLink.link[27]];
   static List<List<String>> Detail_Title =[
+    ["Q - 번개 강타", "R - 폭풍을 부르는 자"],
     ["Q - 번개 강타", "R - 폭풍을 부르는 자"],
     ["Q - 번개 강타", "E - 천공 분열", "R - 폭풍을 부르는 자"],
     ["기본 지속 효과 - 무자비한 폭풍", "Q - 번개 강타", "W - 광란의 상처"],
@@ -5623,6 +5690,9 @@ class PatchContent_Volibear{
   ["기본 능력치","E - 천공 분열"]];
 
   static List<List<List<String>>> Detail_Content =[
+    [["치명타는 전체 스킬 피해량이 아닌 볼리베어의 공격력에만 적용됩니다."],
+    ["재사용 대기시간: 140/120/100 ⇒ 160/135/110"]],
+
     [["추가 이동 속도: 12/17/22/27/32% ⇒ 12/16/20/24/28% (참고: 시야에 들어온 적 챔피언을 향해 이동 시 두 배로 증가합니다.)"],
     ["재사용 대기시간: 130/115/100초 ⇒ 140/120/100초"]],
 
